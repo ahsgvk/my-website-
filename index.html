@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>مكتب الوسيط للتوظيف والخدمات المهنية</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
@@ -63,68 +62,10 @@
       border-radius: 12px;
       box-shadow: 0 2px 14px rgba(0,0,0,0.07);
     }
-    h2, h3, h4 {
+    h2 {
       font-family: 'Cairo', Arial, sans-serif;
       color: #004080;
       margin-top: 1.5em;
-    }
-    .about, .whyus, .features, .contact {
-      margin-bottom: 32px;
-    }
-    .about p, .whyus p, .features p, .contact p {
-      line-height: 2;
-      font-size: 1.07rem;
-    }
-    .features-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      margin-top: 16px;
-    }
-    .feature-box {
-      background: #f0f7fa;
-      border-right: 3px solid #0ea7b5;
-      padding: 18px 14px;
-      border-radius: 7px;
-      flex: 1 1 240px;
-      min-width: 230px;
-      margin-bottom: 8px;
-      box-sizing: border-box;
-      position: relative;
-    }
-    .feature-box span {
-      font-size: 1.8rem;
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      opacity: 0.2;
-    }
-    .contact-info {
-      background: #eaf6fb;
-      padding: 18px 15px;
-      border-radius: 8px;
-      font-size: 1.09rem;
-      margin-top: 12px;
-      line-height: 2;
-      direction: ltr;
-    }
-    .contact-info strong {
-      direction: rtl;
-      display: block;
-      margin-bottom: 4px;
-      color: #004080;
-      font-size: 1.1rem;
-    }
-    .contact-info .phone {
-      direction: rtl;
-      font-weight: bold;
-      color: #0ea7b5;
-      margin-bottom: 2px;
-    }
-    .contact-info .email {
-      color: #004080;
-      direction: ltr;
-      font-weight: bold;
     }
     .apply-form {
       margin-top: 30px;
@@ -142,7 +83,6 @@
     }
     .apply-form input,
     .apply-form select,
-    .apply-form textarea,
     .apply-form button {
       padding: 9px;
       border: 1px solid #bdbdbd;
@@ -152,6 +92,7 @@
       font-size: 1rem;
       width: 100%;
       box-sizing: border-box;
+      background: #f8fafd;
     }
     .apply-form button {
       background: linear-gradient(90deg, #004080 70%, #0ea7b5 100%);
@@ -173,29 +114,6 @@
       margin-top: 40px;
       font-size: 1.05rem;
     }
-    @media (max-width: 700px) {
-      .container {
-        padding: 8px 3vw;
-      }
-      .features-list {
-        flex-direction: column;
-      }
-    }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.3rem;
-      }
-      .subtitle {
-        font-size: 0.95rem;
-      }
-      .container {
-        padding: 5px 2vw;
-        border-radius: 0;
-      }
-      .features-list {
-        gap: 10px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -205,77 +123,53 @@
       منصة متخصصة في تقديم خدمات التوظيف في جميع المجالات (الطبي – الهندسي – الإداري – المهني)، وتوفير كفاءات مؤهلة، بالإضافة إلى إعداد سيرة ذاتية احترافية تهيّئك للقبول في سوق العمل.
     </div>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#about">من نحن</a></li>
-      <li><a href="#whyus">لماذا نحن؟</a></li>
-      <li><a href="#features">خدماتنا</a></li>
-      <li><a href="#apply">التقديم للوظائف</a></li>
-      <li><a href="#contact">تواصل معنا</a></li>
-    </ul>
-  </nav>
+
   <div class="container">
-    <section class="about" id="about">
-      <h2>من نحن</h2>
-      <p>
-        نحن مكتب الوسيط للتوظيف والخدمات المهنية، نعمل على ربط الباحثين عن العمل بأصحاب الأعمال في جميع المجالات والتخصصات.
-        نهدف إلى تقديم خدمات احترافية للتوظيف، وإعداد السير الذاتية، وتسهيل الوصول إلى الوظائف المناسبة داخل وخارج اليمن.
-      </p>
-    </section>
-    <section class="whyus" id="whyus">
-      <h2>لماذا تختار مكتب الوسيط؟</h2>
-      <div class="features-list">
-        <div class="feature-box">✨ خبرة واسعة في سوق العمل</div>
-        <div class="feature-box">✨ قاعدة بيانات ضخمة من الموظفين المؤهلين</div>
-        <div class="feature-box">✨ خدمة إعداد سيرة ذاتية احترافية خلال 24 ساعة</div>
-        <div class="feature-box">✨ تقديم الدعم والاستشارات المهنية</div>
-        <div class="feature-box">✨ تواصل سريع عبر الهاتف أو الواتساب</div>
-        <div class="feature-box">✨ مرونة في التوظيف حسب متطلبات السوق</div>
-      </div>
-    </section>
-    <section class="features" id="features">
-      <h2>خدماتنا</h2>
-      <ul>
-        <li>توفير فرص عمل في جميع المجالات (الطبي، الهندسي، الإداري، المهني).</li>
-        <li>إعداد سيرة ذاتية احترافية تواكب متطلبات أصحاب العمل.</li>
-        <li>تقديم استشارات مهنية وتوجيه للباحثين عن العمل.</li>
-        <li>تسهيل التواصل بين الشركات والمرشحين.</li>
-        <li>توظيف موظفين مؤهلين محليًا ودوليًا.</li>
-      </ul>
-    </section>
     <section id="apply">
       <h2>التقديم للوظائف</h2>
-      <form class="apply-form">
+      <form
+        action="https://formsubmit.co/adeepalmnsop220@gmail.com"
+        method="POST"
+        enctype="multipart/form-data"
+        autocomplete="on"
+        class="apply-form"
+      >
         <label for="fullname">الاسم الكامل</label>
-        <input type="text" id="fullname" required placeholder="أدخل اسمك الكامل">
+        <input type="text" id="fullname" name="الاسم الكامل" required placeholder="أدخل اسمك الكامل" />
+
         <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" required placeholder="example@email.com">
+        <input type="email" id="email" name="البريد الإلكتروني" required placeholder="example@email.com" />
+
         <label for="phone">رقم الهاتف</label>
-        <input type="tel" id="phone" required placeholder="7XXXXXXXX">
+        <input type="tel" id="phone" name="رقم الهاتف" required placeholder="7XXXXXXXX" />
+
         <label for="job">المجال الوظيفي المطلوب</label>
-        <select id="job">
+        <select id="job" name="المجال الوظيفي" required>
+          <option value="" disabled selected>اختر مجال الوظيفة</option>
           <option>الطبي</option>
           <option>الهندسي</option>
           <option>الإداري</option>
           <option>المهني</option>
           <option>مجال آخر</option>
         </select>
-        <label for="cv">السيرة الذاتية</label>
-        <input type="file" id="cv">
+
+        <label for="cv">السيرة الذاتية (PDF, DOC, DOCX)</label>
+        <input type="file" id="cv" name="السيرة الذاتية" accept=".pdf,.doc,.docx" required />
+
+        <!-- تعطيل الكابتشا -->
+        <input type="hidden" name="_captcha" value="false" />
+
+        <!-- إعادة توجيه بعد الإرسال -->
+        <input type="hidden" name="_next" value="thankyou.html" />
+
+        <!-- إرسال البيانات في إيميل كجدول -->
+        <input type="hidden" name="_template" value="table" />
+
         <button type="submit">إرسال الطلب</button>
       </form>
     </section>
-    <section class="contact" id="contact">
-      <h2>تواصل معنا</h2>
-      <p>📞 تواصل معنا الآن واحفظ أرقامنا:</p>
-      <div class="contact-info">
-        <div class="phone">772213835</div>
-        <div class="phone">777837374</div>
-        <div class="phone">712092734</div>
-        <div class="email">📧 adeepalmnsop220@gmail.com</div>
-      </div>
-    </section>
   </div>
+
   <div class="footer">
     &copy; 2025 مكتب الوسيط للتوظيف والخدمات المهنية. جميع الحقوق محفوظة.
   </div>
