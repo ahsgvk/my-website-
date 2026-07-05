@@ -1,177 +1,311 @@
+
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>مكتب الوسيط للتوظيف والخدمات المهنية</title>
+  <meta name="description" content="منصة مكتب الوسيط المتخصصة في التوظيف للكوادر الطبية والهندسية والإدارية في اليمن." />
+  
+  <!-- استدعاء خط كايرو ومكتبة الأيقونات العالمية -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
     body {
-      font-family: 'Cairo', Arial, sans-serif;
+      font-family: 'Cairo', sans-serif;
       margin: 0;
-      background: #f6f7fb;
-      color: #222;
+      background: #f4f7f6;
+      color: #333;
     }
-    header {
-      background: linear-gradient(90deg, #004080 60%, #0ea7b5 100%);
+    
+    /* قسم الهيرو (الواجهة العلوية) */
+    .hero {
+      background: linear-gradient(135deg, #004080 0%, #0ea7b5 100%);
       color: #fff;
-      padding: 36px 0 18px 0;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 80px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    header h1 {
-      margin: 0 0 10px 0;
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0 0 15px 0;
+      font-weight: 900;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero .btn-main {
+      background: #fff;
+      color: #004080;
+      padding: 15px 35px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .hero .btn-main:hover {
+      background: #0ea7b5;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* كروت الخدمات */
+    .services-section {
+      max-width: 1100px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .services-section h2 {
+      color: #004080;
       font-size: 2.2rem;
-      letter-spacing: 1px;
+      margin-bottom: 40px;
     }
-    .subtitle {
-      font-size: 1.15rem;
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: 0.4s;
+      border-bottom: 4px solid #0ea7b5;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .card i {
+      font-size: 3rem;
+      color: #0ea7b5;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      color: #004080;
       margin-bottom: 10px;
     }
-    nav {
+
+    /* نموذج التقديم */
+    .apply-section {
+      max-width: 700px;
+      margin: 50px auto;
       background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    nav ul li {
-      margin: 0 10px;
-    }
-    nav ul li a {
+    .apply-section h2 {
+      text-align: center;
       color: #004080;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 13px 8px;
+      margin-bottom: 30px;
+    }
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .input-group i {
+      position: absolute;
+      right: 15px;
+      top: 42px;
+      color: #0ea7b5;
+    }
+    .apply-section label {
       display: block;
-      border-bottom: 2px solid transparent;
-      transition: border 0.2s;
-    }
-    nav ul li a:hover {
-      border-bottom: 2px solid #0ea7b5;
-    }
-    .container {
-      max-width: 950px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 28px 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
-    }
-    h2 {
-      font-family: 'Cairo', Arial, sans-serif;
-      color: #004080;
-      margin-top: 1.5em;
-    }
-    .apply-form {
-      margin-top: 30px;
-      background: #f8fafd;
-      padding: 20px 15px;
-      border-radius: 10px;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-      max-width: 540px;
-    }
-    .apply-form label {
-      margin-bottom: 5px;
-      display: block;
-      color: #004080;
       font-weight: bold;
+      color: #004080;
+      margin-bottom: 8px;
     }
-    .apply-form input,
-    .apply-form select,
-    .apply-form button {
-      padding: 9px;
-      border: 1px solid #bdbdbd;
-      border-radius: 6px;
-      margin-bottom: 17px;
+    .apply-section input, .apply-section select {
+      width: 100%;
+      padding: 12px 45px 12px 15px;
+      border: 2px solid #eee;
+      border-radius: 8px;
       font-family: inherit;
       font-size: 1rem;
-      width: 100%;
       box-sizing: border-box;
-      background: #f8fafd;
+      transition: 0.3s;
     }
-    .apply-form button {
-      background: linear-gradient(90deg, #004080 70%, #0ea7b5 100%);
+    .apply-section input:focus, .apply-section select:focus {
+      border-color: #0ea7b5;
+      outline: none;
+    }
+    .apply-section button {
+      width: 100%;
+      background: linear-gradient(135deg, #004080 0%, #0ea7b5 100%);
       color: #fff;
+      padding: 15px;
+      font-size: 1.2rem;
       font-weight: bold;
       border: none;
-      font-size: 1.1rem;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: 0.3s;
     }
-    .apply-form button:hover {
-      background: #0ea7b5;
+    .apply-section button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 5px 15px rgba(14, 167, 181, 0.4);
     }
-    .footer {
-      text-align: center;
-      padding: 18px 0;
-      background: #222;
+
+    /* زر الواتساب العائم */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
       color: #fff;
-      margin-top: 40px;
-      font-size: 1.05rem;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      text-decoration: none;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #128c7e;
+    }
+
+    /* الفوتر (الشريط السفلي) */
+    footer {
+      background: #1a252f;
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+    .contact-info {
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+      direction: ltr;
+      font-weight: bold;
+    }
+    .social-icons {
+      margin-bottom: 15px;
+    }
+    .social-icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0ea7b5;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>مكتب الوسيط للتوظيف والخدمات المهنية</h1>
-    <div class="subtitle">
-      منصة متخصصة في تقديم خدمات التوظيف في جميع المجالات (الطبي – الهندسي – الإداري – المهني)، وتوفير كفاءات مؤهلة، بالإضافة إلى إعداد سيرة ذاتية احترافية تهيّئك للقبول في سوق العمل.
-    </div>
+
+  <!-- الهيرو -->
+  <header class="hero">
+    <h1>مكتب الوسيط للتوظيف</h1>
+    <p>منصتك الأولى للوصول إلى أفضل الفرص الوظيفية في القطاع الطبي، الهندسي، والإداري. نحن نربط الكفاءات بصناع القرار.</p>
+    <a href="#apply" class="btn-main"><i class="fa-solid fa-paper-plane"></i> قدّم سيرتك الذاتية الآن</a>
   </header>
 
-  <div class="container">
-    <section id="apply">
-      <h2>التقديم للوظائف</h2>
-      <form
-        action="https://formsubmit.co/adeepalmnsop220@gmail.com"
-        method="POST"
-        enctype="multipart/form-data"
-        autocomplete="on"
-        class="apply-form"
-      >
+  <!-- كروت الخدمات -->
+  <section class="services-section">
+    <h2>مجالات التوظيف المتخصصة</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <i class="fa-solid fa-microscope"></i>
+        <h3>القطاع الطبي</h3>
+        <p>مختبرات، صيدلة، تمريض، وطب عام. نوفر فرصاً في أرقى المنشآت الطبية.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-helmet-safety"></i>
+        <h3>القطاع الهندسي</h3>
+        <p>مهندسون مدنيون، معماريون، وتقنية معلومات لشركات رائدة.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-briefcase"></i>
+        <h3>القطاع الإداري</h3>
+        <p>إدارة أعمال، محاسبة، وموارد بشرية لكبرى المؤسسات.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- نموذج التقديم -->
+  <section id="apply" class="apply-section">
+    <h2><i class="fa-solid fa-file-signature"></i> استمارة التقديم الرسمية</h2>
+    <form action="https://formsubmit.co/adeepalmnsop220@gmail.com" method="POST" enctype="multipart/form-data">
+      
+      <div class="input-group">
         <label for="fullname">الاسم الكامل</label>
-        <input type="text" id="fullname" name="الاسم الكامل" required placeholder="أدخل اسمك الكامل" />
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="fullname" name="الاسم" required placeholder="أدخل اسمك الرباعي" />
+      </div>
 
-        <label for="email">البريد الإلكتروني</label>
-        <input type="email" id="email" name="البريد الإلكتروني" required placeholder="example@email.com" />
-
-        <label for="phone">رقم الهاتف</label>
+      <div class="input-group">
+        <label for="phone">رقم الهاتف أو الواتساب</label>
+        <i class="fa-solid fa-phone"></i>
         <input type="tel" id="phone" name="رقم الهاتف" required placeholder="7XXXXXXXX" />
+      </div>
 
-        <label for="job">المجال الوظيفي المطلوب</label>
-        <select id="job" name="المجال الوظيفي" required>
-          <option value="" disabled selected>اختر مجال الوظيفة</option>
-          <option>الطبي</option>
-          <option>الهندسي</option>
-          <option>الإداري</option>
-          <option>المهني</option>
-          <option>مجال آخر</option>
+      <div class="input-group">
+        <label for="job">المجال الوظيفي</label>
+        <i class="fa-solid fa-stethoscope"></i>
+        <select id="job" name="المجال" required>
+          <option value="" disabled selected>اختر تخصصك الدقيق...</option>
+          <option>مختبرات طبية</option>
+          <option>صيدلة</option>
+          <option>مجال طبي آخر</option>
+          <option>هندسة وتقنية</option>
+          <option>إدارة ومحاسبة</option>
         </select>
+      </div>
 
-        <label for="cv">السيرة الذاتية (PDF, DOC, DOCX)</label>
-        <input type="file" id="cv" name="السيرة الذاتية" accept=".pdf,.doc,.docx" required />
+      <div class="input-group">
+        <label for="cv">إرفاق السيرة الذاتية (PDF/Word)</label>
+        <i class="fa-solid fa-file-pdf"></i>
+        <input type="file" id="cv" name="السيرة الذاتية" accept=".pdf,.doc,.docx" required style="padding-right: 15px;" />
+      </div>
 
-        <!-- تعطيل الكابتشا -->
-        <input type="hidden" name="_captcha" value="false" />
+      <!-- إعدادات FormSubmit المخفية -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://alwaseet2026.netlify.app/thanks.html" />
+      <input type="hidden" name="_subject" value="طلب توظيف جديد من الموقع!" />
 
-        <!-- إعادة توجيه بعد الإرسال -->
-        <input type="hidden" name="_next" value="thankyou.html" />
+      <button type="submit">إرسال الطلب واعتماد السيرة الذاتية <i class="fa-solid fa-arrow-left"></i></button>
+    </form>
+  </section>
 
-        <!-- إرسال البيانات في إيميل كجدول -->
-        <input type="hidden" name="_template" value="table" />
+  <!-- زر الواتساب العائم -->
+  <a href="https://wa.me/967772213835" class="whatsapp-float" target="_blank" title="تواصل معنا عبر الواتساب">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-        <button type="submit">إرسال الطلب</button>
-      </form>
-    </section>
-  </div>
+  <!-- الفوتر -->
+  <footer>
+    <div class="contact-info">
+      <h4 style="color: #0ea7b5; margin-bottom: 10px;"><i class="fa-solid fa-headset"></i> خدمة العملاء والتواصل</h4>
+      <p><i class="fa-solid fa-phone"></i> +967 772 213 835</p>
+      <p><i class="fa-solid fa-mobile-screen"></i> +967 777 837 374</p>
+    </div>
+    
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-telegram"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2026 جميع الحقوق محفوظة | مكتب الوسيط للتوظيف</p>
+  </footer>
 
-  <div class="footer">
-    &copy; 2025 مكتب الوسيط للتوظيف والخدمات المهنية. جميع الحقوق محفوظة.
-  </div>
 </body>
 </html>
